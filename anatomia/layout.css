@@ -28,7 +28,7 @@
     --greenyellow: #adff2f;
     --brown: brown;
     --reference-bgc: var(--blue-cobalt);
-    --layout-width: 993px;
+    --layout-width: 1045px;
     --input-font-size: 14px;
 }
 @media print {

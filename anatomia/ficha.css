@@ -86,7 +86,7 @@
 }
 .ficha__seccao__header {
     display: grid;
-    grid-template-columns: 216px repeat(8, 90px) 53px;
+    grid-template-columns: 268px repeat(8, 90px) 53px;
 }
 .ficha__grid-template-rows-3 {
     display: grid;
@@ -117,9 +117,12 @@
 .ficha__seccao-1__indicador-colunar--oblique {
     transform: rotate(-45deg);
 }
+.ficha__indicador-linear-grid-col-3 {
+    grid-row: 1/3;
+}
 .ficha__linha-com-indicador-e-inputs {
     display: grid;
-    grid-template-columns: 216px repeat(9, 30px) repeat(3, 90px) repeat(6, 30px) 53px;
+    grid-template-columns: 208px 60px repeat(9, 30px) repeat(3, 90px) repeat(6, 30px) 53px;
     overflow: hidden;
     min-height: 36px;
 }
@@ -127,14 +130,14 @@
 .ficha__seccao__header--s4,
 .ficha__linha-com-indicador-e-inputs--s2, 
 .ficha__linha-com-indicador-e-inputs--s4 {
-    grid-template-columns: calc(216px + 9 * 30px + 40px) repeat(4, 115.75px);
+    grid-template-columns: calc(216px + 9 * 30px + 52px) repeat(4, 125.75px);
 }
 .ficha__seccao__header--s3,
 .ficha__linha-com-indicador-e-inputs--s3 {
-    grid-template-columns: calc(216px + 8 * 30px) repeat(6, 88.83px);
+    grid-template-columns: calc(216px + 8 * 30px) repeat(6, 97.5px);
 }
 .ficha__linha-com-indicador-e-inputs span {
-    padding: 3px 2px;
+    padding: 1.5px 2px;
 }
 [data-totalgeral]:focus,
 .input-celular--focus:focus,
