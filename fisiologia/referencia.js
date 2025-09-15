@@ -3,38 +3,24 @@ const referencia = {
     retornarLinhaEcoluna(inputTarget) {
         const linhaOutput = document.querySelector(".reference__output--indicador");
         const colOutput = document.querySelector(".reference__output--idade");
-        const celulaComFocoEirmas = inputTarget.parentElement.children;
-        let CelulaComFocoIndex = 0;
-        for (let i = 0; i < celulaComFocoEirmas.length; i++) {
-            if(celulaComFocoEirmas[i] === inputTarget) CelulaComFocoIndex = i-1;
+        const inputTargetAndSiblings = inputTarget.parentElement.children;
+        let inputTargetIndex;
+        for (let i = 0; i < inputTargetAndSiblings.length; i++) {
+            if(inputTargetAndSiblings[i] === inputTarget) inputTargetIndex = i-1;
         }
-        let tituloDaSeccao = inputTarget.parentElement.parentElement.getElementsByTagName("h2")[0];
-        let indicadorLinear = inputTarget.parentElement.querySelector("span");
-        let indicadoresColunares = document.querySelectorAll(".seccao-1__header__linha-de-indicadores-colunares span");
-        if(inputTarget.parentElement.matches(".seccao-2__body__tipo-de-resistencia")) {
-            indicadorLinear = document.querySelector(".seccao-1__header__col-variaveis"); // Aponta para um elemento vazio
+        let indicadorLinear = inputTargetAndSiblings[0].textContent;
+        let colunas = ["0 - 4","5 - 14","≥ 15","Total","Grávidas","Lactantes"];
+        function theInputIsFromSection1(input) {return input.parentElement.parentElement.matches(".ficha__seccao--1");}
+        if(theInputIsFromSection1(inputTarget)) {
+            let bmOuUSIndex= (inputTargetIndex < 20) ? 1 : 21; // 0 = Dentro da US; 21 = Brigada Móvel
+            indicadorLinear = `${inputTargetAndSiblings[0].textContent} (${inputTargetAndSiblings[bmOuUSIndex].textContent})`;
+            colunas = ["PVHIV 0 - 4","PVHIV 5 - 14","PVHIV ≥ 15", "Contactos de TB 0 - 4","Contactos de TB 5 - 14","Contactos de TB ≥ 15", "Diabetes 0 - 4","Diabetes 5 - 14","Diabetes ≥ 15", "Mineiros ≥ 15", "Prisioneiros ≥ 15", "Trabalhador de Saúde ≥ 15", "Outros 0 - 4","Outros 5 - 14","Outros ≥ 15"];
+            inputTargetIndex--;
+            (inputTargetIndex > 19) && (inputTargetIndex -= 20);
         }
-        linhaOutput.textContent = `${tituloDaSeccao.textContent}: ${indicadorLinear.textContent}`;
-        // Seccoes
-        let isSection2 = inputTarget.parentElement.parentElement.matches(".ficha__seccao--2");
-        let isSection3 = inputTarget.parentElement.parentElement.matches(".ficha__seccao--3");
-        let isSection4 = inputTarget.parentElement.parentElement.matches(".ficha__seccao--4");
-        if(isSection2) {
-            indicadoresColunares = document.querySelectorAll(".seccao-2__header__col2-da-linha-inferior span");
-            CelulaComFocoIndex++;
-            if(inputTarget.parentElement.matches(".ficha__seccao-2__grid-template-cols-4")) {
-                indicadoresColunares = "";
-            }
-            else if(inputTarget.parentElement.matches(".seccao-2__body__tipo-de-resistencia")) {
-                indicadoresColunares = document.querySelectorAll(".seccao-2__pseudoheader__tipo-de-resistencia span");
-            }
-        } else if(isSection3) {
-            indicadoresColunares = document.querySelectorAll(".ficha__seccao-3__indicador-colunar");
-        } else if(isSection4) {
-            indicadoresColunares = document.querySelectorAll(".seccao-4__header__linha-de-indicadores-colunares span");
-        }
-        let indicadorColunar = indicadoresColunares[CelulaComFocoIndex];
-        colOutput.textContent = indicadorColunar.textContent;
+        let indicadorColunar = colunas[inputTargetIndex];
+        linhaOutput.textContent = indicadorLinear;
+        colOutput.textContent = indicadorColunar;
     },
     retornarVazio() {
         const outputs = document.querySelectorAll(".reference__output");

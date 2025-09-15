@@ -81,7 +81,7 @@ const aqd = {
 function actualizarAnoDeCopyright() {
     const tempo = new Date();
     let anoActual = tempo.getFullYear();
-    if(anoActual < 2024) anoActual = 2024;
+    if(anoActual < 2025) anoActual = 2025;
     const currentYearOutput = document.querySelector(".footer__current-year");
     currentYearOutput.textContent = anoActual;
 }
@@ -117,7 +117,7 @@ const Tooltip = {
     }
 }
 function preencherCelulasVaziasComZero(){
-    const celulas = document.querySelectorAll("[data-totalgeral], .input-celular--focus");
+    const celulas = document.querySelectorAll(".ficha__seccao input");
     const btnAtalhoVazioIgualZero = document.querySelector(".main__btn-fixed--emptycell-equals-zero");
     btnAtalhoVazioIgualZero.addEventListener("click", () => {
         let celulasVazias = 0;

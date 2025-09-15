@@ -64,7 +64,3 @@ window.addEventListener("load", () => {
     backup.saveExtraInputs();
     escutarEventos();    
 });
-
-
-
-
