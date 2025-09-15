@@ -1,5 +1,5 @@
 ﻿"use strict"
-var keyPrefix = "trmvntbr";
+var keyPrefix = "trmprov";
 function desfoqueDoFundo(accao) {
     const desfoque = document.querySelector(".desfoque");
     accao === "desfocar" ? 
@@ -117,7 +117,7 @@ const Tooltip = {
     }
 }
 function preencherCelulasVaziasComZero(){
-    const celulas = document.querySelectorAll(".ficha input[type=number]");
+    const celulas = document.querySelectorAll("[data-totalgeral], .input-celular--focus");
     const btnAtalhoVazioIgualZero = document.querySelector(".main__btn-fixed--emptycell-equals-zero");
     btnAtalhoVazioIgualZero.addEventListener("click", () => {
         let celulasVazias = 0;
