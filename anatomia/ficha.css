@@ -175,50 +175,29 @@
     background-color: var(--cor-de-risco);
     color: var(--yt)
 }
+.input--font-small {
+    font-size: 12px
+}
 .ficha__rodape {
     padding: 2px;
     min-height: 101px;
     display: grid;
-    grid-template-columns: 680px 1fr;
+    grid-template-columns: 720px 1fr;
     align-items: end;
 }
 .ficha__rodape__col-de-nome {
     min-height: 26px;
 }
 .ficha__rodape__campo-de-nome {
-    width: 400px;
+    width: 435px;
     min-height: 22px;
 }
+.ficha__rodape__col-de-categoria {
+    min-height: 20px;
+}
 .ficha__rodape__campo-de-categoria {
-    width: 223px;
+    width: 243px;
 }
 .ficha__rodape__campo-de-data {
     min-height: 26px;
-}
-/*
-[data-totaleixoyoutput]:focus,
-[data-totaleixoxoutput]:focus,
-.input-celular--focus:focus,
-.input-nao-celular:focus {
-    border-bottom: 2px solid var(--blue);
-    background-color: var(--greenyellow);
-    color: var(--cor-de-texto);
-}
-.--bg-default {
-    background-color: var(--gray-c);
-}
-.--bg-default-discreta {
-    background-color: var(--gray-d);
-}
-@media screen {
-    .input--realcar-totais {
-        background-color: var(--cor-de-realce-de-totais);
-    }
-}
-.input--bg-color-danger {
-    background-color: var(--cor-de-risco);
-    color: var(--yt)
-}
-.input--font-small {
-    font-size: 12px
 }

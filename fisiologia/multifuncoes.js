@@ -29,9 +29,13 @@ function destacarCelulasComConteudoOmisso() {
     for(const c of celulas) {
         c.classList.remove("input--font-small");
         c.classList.remove("input--bg-color-danger");
-        if(c.clientWidth <= 36 && c.value.length > 3) {
-            c.classList.add("input--bg-color-danger");
-            celulasSaturadas++;
+        if(c.clientWidth <= 36) {
+            if(c.value.length === 4) {
+                c.classList.add("input--font-small");
+            } else if(c.value.length > 4) {   
+                c.classList.add("input--bg-color-danger");
+                celulasSaturadas++;
+            }
         } else if(c.clientWidth <= 99 && c.value.length > 11) {
             c.classList.add("input--bg-color-danger");
             celulasSaturadas++;
