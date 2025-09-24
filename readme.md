@@ -2,7 +2,7 @@
 
 ![Trecho do Totalizador do Resumo Mensal de Notificação de TB e TB/HIV](imagens/totalizador-de-resumo-mensal-de-rastreio-de-tb-usando-rx.png)
 
-O **Totalizador de Resumo Mensal de Rastreio de TB usando RX** é um serviço online gratuito que auxilia na elaboração do resumo mensal de rastreio de TB usando Raio X (RX) por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi criado de acordo com o modelo da respectiva ficha de resumo mensal actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Resumo Mensal de Rastreio de TB usando RX** é um serviço online gratuito que auxilia na elaboração do resumo mensal de rastreio de TB usando Raio X (RX) por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo mensal actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos
