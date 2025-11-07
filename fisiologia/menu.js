@@ -162,9 +162,9 @@ function eventos() {
     });
     // PARTILHAR 
     const data = {
-        title: "Totalizador de Resumo Mensal de Vigilância e Notificação de TB Resistente",
-        text: "Totaliza automaticamente o resumo mensal de vigilância e notificação de TB resistente com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo mensal actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
-        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-vigilancia-e-notificacao-de-tb-resistente/index.html"
+        title: "Totalizador de Resumo Mensal de Rastreio de TB usando RX",
+        text: "Totaliza automaticamente o resumo mensal de rastreio de TB usando Raio X (RX) com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo mensal actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-rastreio-de-tb-usando-rx/index.html"
     }
     const btnPartilhar = document.querySelector(".main__btn-fixed--share");
     btnPartilhar.addEventListener("click", () => {
